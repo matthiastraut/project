@@ -1,0 +1,11 @@
+jane_street_streaming:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: zoomcamp-de-project-495316
+      dataset: jane_street_market_data
+      threads: 4
+      keyfile: ../gcp.json
+      location: EU

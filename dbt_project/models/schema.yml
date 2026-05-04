@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: jane_street
+    database: zoomcamp-de-project-495316
+    schema: jane_street_market_data
+    tables:
+      - name: raw_market_data
+
+models:
+  - name: market_data_daily
+    description: "Daily aggregated market data, partitioned by date_id and clustered by symbol_id for optimal dashboard querying."
+    columns:
+      - name: date_id
+        description: "The trading date"
+      - name: symbol_id
+        description: "The unique identifier for the market symbol"
+      - name: tick_count
+        description: "Number of ticks for this symbol on this date"
+      - name: avg_weight
+        description: "Average weight"
+      - name: avg_responder_6
+        description: "Average of responder_6"

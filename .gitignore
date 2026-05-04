@@ -1,0 +1,23 @@
+# Data
+jane-street-real-time-market-data-forecasting/
+jane-street-real-time-market-data-forecasting.zip
+data/
+data_output/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# GCP & Terraform
+gcp.json
+.terraform/
+terraform.tfstate*
+.terraform.lock.hcl
+
+# System
+.DS_Store
+.env
+
+# Scratch
+test.py

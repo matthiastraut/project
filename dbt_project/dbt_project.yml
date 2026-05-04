@@ -1,0 +1,20 @@
+name: 'jane_street_streaming'
+version: '1.0.0'
+config-version: 2
+
+profile: 'jane_street_streaming'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  jane_street_streaming:
+    +materialized: table
