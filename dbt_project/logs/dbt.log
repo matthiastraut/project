@@ -1,0 +1,475 @@
+[0m22:37:35.857440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a078950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a165f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a6eeed0>]}
+
+
+============================== 22:37:35.871469 | 67ee9096-722a-4fd2-b5b9-ca030025dceb ==============================
+[0m22:37:35.871469 [info ] [MainThread]: Running with dbt=1.8.7
+[0m22:37:35.871893 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/matthiastraut/Courses/project/dbt_project/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:38:11.052122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17cd3d610>]}
+[0m22:38:11.095190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a53bd0>]}
+[0m22:38:11.097511 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m22:38:11.325385 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m22:38:11.325959 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:38:11.326209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b8cfb50>]}
+[0m22:38:12.198115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17ce69f50>]}
+[0m22:38:12.287615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17ecb2b50>]}
+[0m22:38:12.288106 [info ] [MainThread]: Found 1 model, 1 source, 489 macros
+[0m22:38:12.288430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17d89c8d0>]}
+[0m22:38:12.289679 [info ] [MainThread]: 
+[0m22:38:12.290226 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:38:12.290748 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_zoomcamp-de-project-495316'
+[0m22:38:12.290996 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:38:13.020892 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316, now list_zoomcamp-de-project-495316_jane_street_market_data)
+[0m22:38:13.021373 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:38:13.578905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17d851ad0>]}
+[0m22:38:13.579441 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:38:13.650705 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:38:13.651062 [info ] [MainThread]: 
+[0m22:38:13.653452 [debug] [Thread-1 (]: Began running node model.jane_street_streaming.market_data_daily
+[0m22:38:13.653908 [info ] [Thread-1 (]: 1 of 1 START sql table model jane_street_market_data.market_data_daily ......... [RUN]
+[0m22:38:13.654738 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316_jane_street_market_data, now model.jane_street_streaming.market_data_daily)
+[0m22:38:13.655241 [debug] [Thread-1 (]: Began compiling node model.jane_street_streaming.market_data_daily
+[0m22:38:13.661348 [debug] [Thread-1 (]: Writing injected SQL for node "model.jane_street_streaming.market_data_daily"
+[0m22:38:13.662129 [debug] [Thread-1 (]: Began executing node model.jane_street_streaming.market_data_daily
+[0m22:38:13.696181 [debug] [Thread-1 (]: Writing runtime sql for node "model.jane_street_streaming.market_data_daily"
+[0m22:38:13.697025 [debug] [Thread-1 (]: On model.jane_street_streaming.market_data_daily: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "jane_street_streaming", "target_name": "dev", "node_id": "model.jane_street_streaming.market_data_daily"} */
+
+  
+    
+
+    create or replace table `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily`
+      
+    partition by range_bucket(
+            date_id,
+            generate_array(0, 2000, 1)
+        )
+    cluster by symbol_id
+
+    OPTIONS()
+    as (
+      
+
+-- This model assumes an external table or raw table exists named `raw_market_data`
+-- that has been loaded from GCS or directly written by Flink.
+-- We aggregate it to daily level to power Looker Studio efficiently.
+
+WITH source_data AS (
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
+)
+
+SELECT
+    date_id,
+    symbol_id,
+    COUNT(time_id) as tick_count,
+    AVG(weight) as avg_weight,
+    AVG(feature_00) as avg_feature_00,
+    AVG(feature_01) as avg_feature_01,
+    AVG(responder_6) as avg_responder_6
+FROM source_data
+GROUP BY 
+    date_id, 
+    symbol_id
+    );
+  
+[0m22:38:13.697335 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:14.788773 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:0443823b-54c1-4917-bcae-5285b971277b&page=queryresults
+[0m22:38:15.115059 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:0443823b-54c1-4917-bcae-5285b971277b&page=queryresults
+[0m22:38:15.124349 [debug] [Thread-1 (]: Database Error in model market_data_daily (models/market_data_daily.sql)
+  Error while reading table: zoomcamp-de-project-495316.jane_street_market_data.raw_market_data, error message: JSON parsing error in row starting at position 0: No such field: feature_02. File: gs://jane_street_market_data_lake_zoomcamp-de-project-495316/raw/market_data_20260504_211635.json
+  compiled code at target/run/jane_street_streaming/models/market_data_daily.sql
+[0m22:38:15.125499 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '67ee9096-722a-4fd2-b5b9-ca030025dceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17ecd0fd0>]}
+[0m22:38:15.125971 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model jane_street_market_data.market_data_daily  [[31mERROR[0m in 1.47s]
+[0m22:38:15.126392 [debug] [Thread-1 (]: Finished running node model.jane_street_streaming.market_data_daily
+[0m22:38:15.130633 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:38:15.216985 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:38:15.217358 [debug] [MainThread]: Connection 'model.jane_street_streaming.market_data_daily' was properly closed.
+[0m22:38:15.217604 [info ] [MainThread]: 
+[0m22:38:15.217878 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.93 seconds (2.93s).
+[0m22:38:15.218303 [debug] [MainThread]: Command end result
+[0m22:38:15.249085 [info ] [MainThread]: 
+[0m22:38:15.249810 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:38:15.250349 [info ] [MainThread]: 
+[0m22:38:15.251233 [error] [MainThread]:   Database Error in model market_data_daily (models/market_data_daily.sql)
+  Error while reading table: zoomcamp-de-project-495316.jane_street_market_data.raw_market_data, error message: JSON parsing error in row starting at position 0: No such field: feature_02. File: gs://jane_street_market_data_lake_zoomcamp-de-project-495316/raw/market_data_20260504_211635.json
+  compiled code at target/run/jane_street_streaming/models/market_data_daily.sql
+[0m22:38:15.253139 [info ] [MainThread]: 
+[0m22:38:15.254144 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m22:38:15.289384 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 39.492, "process_user_time": 12.168331, "process_kernel_time": 3.367115, "process_mem_max_rss": "414842880", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:38:15.290201 [debug] [MainThread]: Command `dbt run` failed at 22:38:15.290057 after 39.49 seconds
+[0m22:38:15.290549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104de48d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a6eb4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17cd4ddd0>]}
+[0m22:38:15.290798 [debug] [MainThread]: Flushing usage events
+[0m22:39:55.275488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053574d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053c74d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053c4e50>]}
+
+
+============================== 22:39:55.279400 | 8feb7d33-22c2-4a01-be8d-4ca11209f62a ==============================
+[0m22:39:55.279400 [info ] [MainThread]: Running with dbt=1.8.7
+[0m22:39:55.279961 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/matthiastraut/Courses/project/dbt_project/logs', 'version_check': 'True', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:39:59.787125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15e1c15d0>]}
+[0m22:39:59.848326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10323f150>]}
+[0m22:39:59.848958 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m22:40:00.050487 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m22:40:00.136227 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:40:00.136564 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:40:00.158965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15e29e610>]}
+[0m22:40:00.220301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15e1c3dd0>]}
+[0m22:40:00.220791 [info ] [MainThread]: Found 1 model, 1 source, 489 macros
+[0m22:40:00.221121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15e5c2e50>]}
+[0m22:40:00.222194 [info ] [MainThread]: 
+[0m22:40:00.222604 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:40:00.223303 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_zoomcamp-de-project-495316'
+[0m22:40:00.223616 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:01.021048 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316, now list_zoomcamp-de-project-495316_jane_street_market_data)
+[0m22:40:01.021698 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:40:01.573133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103687490>]}
+[0m22:40:01.573582 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:40:01.647053 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:40:01.647397 [info ] [MainThread]: 
+[0m22:40:01.649000 [debug] [Thread-1 (]: Began running node model.jane_street_streaming.market_data_daily
+[0m22:40:01.649315 [info ] [Thread-1 (]: 1 of 1 START sql table model jane_street_market_data.market_data_daily ......... [RUN]
+[0m22:40:01.649585 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316_jane_street_market_data, now model.jane_street_streaming.market_data_daily)
+[0m22:40:01.649798 [debug] [Thread-1 (]: Began compiling node model.jane_street_streaming.market_data_daily
+[0m22:40:01.655614 [debug] [Thread-1 (]: Writing injected SQL for node "model.jane_street_streaming.market_data_daily"
+[0m22:40:01.656218 [debug] [Thread-1 (]: Began executing node model.jane_street_streaming.market_data_daily
+[0m22:40:01.686981 [debug] [Thread-1 (]: Writing runtime sql for node "model.jane_street_streaming.market_data_daily"
+[0m22:40:01.687634 [debug] [Thread-1 (]: On model.jane_street_streaming.market_data_daily: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "jane_street_streaming", "target_name": "dev", "node_id": "model.jane_street_streaming.market_data_daily"} */
+
+  
+    
+
+    create or replace table `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily`
+      
+    partition by range_bucket(
+            date_id,
+            generate_array(0, 2000, 1)
+        )
+    cluster by symbol_id
+
+    OPTIONS()
+    as (
+      
+
+-- This model assumes an external table or raw table exists named `raw_market_data`
+-- that has been loaded from GCS or directly written by Flink.
+-- We aggregate it to daily level to power Looker Studio efficiently.
+
+WITH source_data AS (
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
+)
+
+SELECT
+    date_id,
+    symbol_id,
+    COUNT(time_id) as tick_count,
+    AVG(weight) as avg_weight,
+    AVG(feature_00) as avg_feature_00,
+    AVG(feature_01) as avg_feature_01,
+    AVG(responder_6) as avg_responder_6
+FROM source_data
+GROUP BY 
+    date_id, 
+    symbol_id
+    );
+  
+[0m22:40:01.687974 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:40:02.717617 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:300db764-ec94-48b3-abc7-d3de34e082c9&page=queryresults
+[0m22:40:07.632359 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8feb7d33-22c2-4a01-be8d-4ca11209f62a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15e260990>]}
+[0m22:40:07.634254 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jane_street_market_data.market_data_daily .... [[32mCREATE TABLE (302.0 rows, 262.7 MiB processed)[0m in 5.98s]
+[0m22:40:07.634943 [debug] [Thread-1 (]: Finished running node model.jane_street_streaming.market_data_daily
+[0m22:40:07.637642 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:40:07.708716 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:40:07.709048 [debug] [MainThread]: Connection 'model.jane_street_streaming.market_data_daily' was properly closed.
+[0m22:40:07.709306 [info ] [MainThread]: 
+[0m22:40:07.709616 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.49 seconds (7.49s).
+[0m22:40:07.710166 [debug] [MainThread]: Command end result
+[0m22:40:07.732560 [info ] [MainThread]: 
+[0m22:40:07.733036 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:40:07.733313 [info ] [MainThread]: 
+[0m22:40:07.733713 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:40:07.738414 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.513971, "process_user_time": 4.966521, "process_kernel_time": 1.965062, "process_mem_max_rss": "381091840", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:40:07.739302 [debug] [MainThread]: Command `dbt run` succeeded at 22:40:07.739211 after 12.52 seconds
+[0m22:40:07.739839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1012888d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053e64d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051479d0>]}
+[0m22:40:07.740099 [debug] [MainThread]: Flushing usage events
+[0m23:01:29.677422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067f3890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10685c950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106856d90>]}
+
+
+============================== 23:01:29.681339 | 1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb ==============================
+[0m23:01:29.681339 [info ] [MainThread]: Running with dbt=1.8.7
+[0m23:01:29.681898 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/matthiastraut/Courses/project/dbt_project/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:01:35.124755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1774f3e90>]}
+[0m23:01:35.172581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103dcf110>]}
+[0m23:01:35.173409 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m23:01:35.423817 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m23:01:35.577483 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:01:35.577873 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:01:35.617781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16f4870d0>]}
+[0m23:01:35.729753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17754c610>]}
+[0m23:01:35.730820 [info ] [MainThread]: Found 1 model, 1 source, 489 macros
+[0m23:01:35.731226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1774c4590>]}
+[0m23:01:35.734513 [info ] [MainThread]: 
+[0m23:01:35.735674 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:01:35.737372 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_zoomcamp-de-project-495316'
+[0m23:01:35.737788 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:01:36.644697 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316, now list_zoomcamp-de-project-495316_jane_street_market_data)
+[0m23:01:36.645802 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:01:37.286086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1774c4590>]}
+[0m23:01:37.286592 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:01:37.370579 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:01:37.371154 [info ] [MainThread]: 
+[0m23:01:37.373924 [debug] [Thread-1 (]: Began running node model.jane_street_streaming.market_data_daily
+[0m23:01:37.374440 [info ] [Thread-1 (]: 1 of 1 START sql table model jane_street_market_data.market_data_daily ......... [RUN]
+[0m23:01:37.374811 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316_jane_street_market_data, now model.jane_street_streaming.market_data_daily)
+[0m23:01:37.375058 [debug] [Thread-1 (]: Began compiling node model.jane_street_streaming.market_data_daily
+[0m23:01:37.382674 [debug] [Thread-1 (]: Writing injected SQL for node "model.jane_street_streaming.market_data_daily"
+[0m23:01:37.384000 [debug] [Thread-1 (]: Began executing node model.jane_street_streaming.market_data_daily
+[0m23:01:37.405982 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:01:38.176334 [debug] [Thread-1 (]: Writing runtime sql for node "model.jane_street_streaming.market_data_daily"
+[0m23:01:38.178333 [debug] [Thread-1 (]: On model.jane_street_streaming.market_data_daily: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "jane_street_streaming", "target_name": "dev", "node_id": "model.jane_street_streaming.market_data_daily"} */
+
+  
+    
+
+    create or replace table `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily`
+      
+    partition by range_bucket(
+            date_id,
+            generate_array(0, 2000, 1)
+        )
+    cluster by symbol_id
+
+    OPTIONS()
+    as (
+      
+
+-- This model assumes an external table or raw table exists named `raw_market_data`
+-- that has been loaded from GCS or directly written by Flink.
+-- We aggregate it to daily level to power Looker Studio efficiently.
+
+WITH source_data AS (
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
+)
+
+SELECT
+    date_id,
+    symbol_id,
+    COUNT(time_id) as tick_count,
+    AVG(weight) as avg_weight,
+    AVG(feature_00) as avg_feature_00,
+    AVG(feature_01) as avg_feature_01,
+    AVG(responder_6) as avg_responder_6
+FROM source_data
+GROUP BY 
+    date_id, 
+    symbol_id
+    );
+  
+[0m23:01:38.778809 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:e8bb9a87-1d81-4a2f-93fd-0cd5cb0d8c56&page=queryresults
+[0m23:01:44.223849 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1fb9de68-0d2c-4596-892c-bf8c2cfdb9bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16f3a5050>]}
+[0m23:01:44.225587 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jane_street_market_data.market_data_daily .... [[32mCREATE TABLE (459.0 rows, 381.8 MiB processed)[0m in 6.85s]
+[0m23:01:44.226061 [debug] [Thread-1 (]: Finished running node model.jane_street_streaming.market_data_daily
+[0m23:01:44.227224 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:01:44.306410 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:01:44.306741 [debug] [MainThread]: Connection 'model.jane_street_streaming.market_data_daily' was properly closed.
+[0m23:01:44.307122 [info ] [MainThread]: 
+[0m23:01:44.307368 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.57 seconds (8.57s).
+[0m23:01:44.307833 [debug] [MainThread]: Command end result
+[0m23:01:44.328230 [info ] [MainThread]: 
+[0m23:01:44.328678 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:01:44.329055 [info ] [MainThread]: 
+[0m23:01:44.329428 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m23:01:44.338727 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 14.722076, "process_user_time": 5.445254, "process_kernel_time": 2.140751, "process_mem_max_rss": "369803264", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:01:44.339918 [debug] [MainThread]: Command `dbt run` succeeded at 23:01:44.339773 after 14.72 seconds
+[0m23:01:44.340866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10152ca50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10685f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1015a8b50>]}
+[0m23:01:44.341672 [debug] [MainThread]: Flushing usage events
+[0m23:06:18.831929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072ef190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10737df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10737e8d0>]}
+
+
+============================== 23:06:18.835246 | 455aa429-ad63-4815-b522-8106259d1af0 ==============================
+[0m23:06:18.835246 [info ] [MainThread]: Running with dbt=1.8.7
+[0m23:06:18.835746 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/matthiastraut/Courses/project/dbt_project/logs', 'profiles_dir': '.', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:06:23.668499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ddced0>]}
+[0m23:06:23.709286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1048d6a50>]}
+[0m23:06:23.709798 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m23:06:23.887830 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m23:06:23.974033 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:06:23.974476 [debug] [MainThread]: Partial parsing: updated file: jane_street_streaming://models/market_data_daily.sql
+[0m23:06:24.201970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x178e54390>]}
+[0m23:06:24.292064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x178fff210>]}
+[0m23:06:24.292540 [info ] [MainThread]: Found 1 model, 1 source, 489 macros
+[0m23:06:24.292769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x178e63410>]}
+[0m23:06:24.293926 [info ] [MainThread]: 
+[0m23:06:24.294273 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:06:24.294799 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_zoomcamp-de-project-495316'
+[0m23:06:24.295063 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:25.009870 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316, now list_zoomcamp-de-project-495316_jane_street_market_data)
+[0m23:06:25.010247 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:06:25.541228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1774b64d0>]}
+[0m23:06:25.541582 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:06:25.611984 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:06:25.612309 [info ] [MainThread]: 
+[0m23:06:25.614530 [debug] [Thread-1 (]: Began running node model.jane_street_streaming.market_data_daily
+[0m23:06:25.614885 [info ] [Thread-1 (]: 1 of 1 START sql table model jane_street_market_data.market_data_daily ......... [RUN]
+[0m23:06:25.615173 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316_jane_street_market_data, now model.jane_street_streaming.market_data_daily)
+[0m23:06:25.615393 [debug] [Thread-1 (]: Began compiling node model.jane_street_streaming.market_data_daily
+[0m23:06:25.621037 [debug] [Thread-1 (]: Writing injected SQL for node "model.jane_street_streaming.market_data_daily"
+[0m23:06:25.622343 [debug] [Thread-1 (]: Began executing node model.jane_street_streaming.market_data_daily
+[0m23:06:25.638258 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:06:26.287744 [debug] [Thread-1 (]: Writing runtime sql for node "model.jane_street_streaming.market_data_daily"
+[0m23:06:26.288634 [debug] [Thread-1 (]: On model.jane_street_streaming.market_data_daily: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "jane_street_streaming", "target_name": "dev", "node_id": "model.jane_street_streaming.market_data_daily"} */
+
+  
+    
+
+    create or replace table `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily`
+      
+    partition by range_bucket(
+            date_id,
+            generate_array(0, 2000, 1)
+        )
+    cluster by symbol_id
+
+    OPTIONS()
+    as (
+      
+
+-- This model assumes an external table or raw table exists named `raw_market_data`
+-- that has been loaded from GCS or directly written by Flink.
+-- We aggregate it to daily level to power Looker Studio efficiently.
+
+WITH source_data AS (
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
+)
+
+SELECT
+    date_id,
+    symbol_id,
+    COUNT(time_id) as tick_count,
+    AVG(weight) as avg_weight,
+    AVG(feature_00) as avg_feature_00,
+    AVG(feature_01) as avg_feature_01,
+    AVG(responder_6) as avg_responder_6
+FROM source_data
+GROUP BY 
+    date_id, 
+    symbol_id
+ORDER BY 
+    date_id, 
+    symbol_id
+    );
+  
+[0m23:06:26.899684 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:83af588f-e651-46c9-bc56-7335b4677cbb&page=queryresults
+[0m23:06:27.044120 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:83af588f-e651-46c9-bc56-7335b4677cbb&page=queryresults
+[0m23:06:27.053948 [debug] [Thread-1 (]: Database Error in model market_data_daily (models/market_data_daily.sql)
+  Result of ORDER BY queries cannot be partitioned by field 'date_id'
+  compiled code at target/run/jane_street_streaming/models/market_data_daily.sql
+[0m23:06:27.055068 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '455aa429-ad63-4815-b522-8106259d1af0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17f370510>]}
+[0m23:06:27.055558 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model jane_street_market_data.market_data_daily  [[31mERROR[0m in 1.44s]
+[0m23:06:27.055932 [debug] [Thread-1 (]: Finished running node model.jane_street_streaming.market_data_daily
+[0m23:06:27.057575 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:06:27.128745 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:06:27.129170 [debug] [MainThread]: Connection 'model.jane_street_streaming.market_data_daily' was properly closed.
+[0m23:06:27.129511 [info ] [MainThread]: 
+[0m23:06:27.129800 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.84 seconds (2.84s).
+[0m23:06:27.130251 [debug] [MainThread]: Command end result
+[0m23:06:27.158597 [info ] [MainThread]: 
+[0m23:06:27.159013 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:06:27.159224 [info ] [MainThread]: 
+[0m23:06:27.159656 [error] [MainThread]:   Database Error in model market_data_daily (models/market_data_daily.sql)
+  Result of ORDER BY queries cannot be partitioned by field 'date_id'
+  compiled code at target/run/jane_street_streaming/models/market_data_daily.sql
+[0m23:06:27.159900 [info ] [MainThread]: 
+[0m23:06:27.160256 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m23:06:27.164315 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 8.391524, "process_user_time": 5.377862, "process_kernel_time": 1.953352, "process_mem_max_rss": "374390784", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:06:27.164696 [debug] [MainThread]: Command `dbt run` failed at 23:06:27.164645 after 8.39 seconds
+[0m23:06:27.164971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100d4c590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107355f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100dc8b90>]}
+[0m23:06:27.165398 [debug] [MainThread]: Flushing usage events
+[0m23:07:58.413525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107673310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e0910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065fb7d0>]}
+
+
+============================== 23:07:58.417974 | f3505ac3-95c3-4330-be52-3f18a17a8565 ==============================
+[0m23:07:58.417974 [info ] [MainThread]: Running with dbt=1.8.7
+[0m23:07:58.418712 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Users/matthiastraut/Courses/project/dbt_project/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:08:03.377633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16e376b90>]}
+[0m23:08:03.426645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10539b2d0>]}
+[0m23:08:03.427401 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m23:08:03.631350 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m23:08:03.728417 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:08:03.728979 [debug] [MainThread]: Partial parsing: updated file: jane_street_streaming://models/market_data_daily.sql
+[0m23:08:04.052729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ec64310>]}
+[0m23:08:04.123561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x17aeae290>]}
+[0m23:08:04.123975 [info ] [MainThread]: Found 1 model, 1 source, 489 macros
+[0m23:08:04.124213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16d350250>]}
+[0m23:08:04.125442 [info ] [MainThread]: 
+[0m23:08:04.125823 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:08:04.126337 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_zoomcamp-de-project-495316'
+[0m23:08:04.126572 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:08:04.868654 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316, now list_zoomcamp-de-project-495316_jane_street_market_data)
+[0m23:08:04.869020 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:08:05.606495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16f127a10>]}
+[0m23:08:05.606905 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:08:05.685719 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:08:05.686132 [info ] [MainThread]: 
+[0m23:08:05.689852 [debug] [Thread-1 (]: Began running node model.jane_street_streaming.market_data_daily
+[0m23:08:05.690413 [info ] [Thread-1 (]: 1 of 1 START sql table model jane_street_market_data.market_data_daily ......... [RUN]
+[0m23:08:05.691054 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_zoomcamp-de-project-495316_jane_street_market_data, now model.jane_street_streaming.market_data_daily)
+[0m23:08:05.691554 [debug] [Thread-1 (]: Began compiling node model.jane_street_streaming.market_data_daily
+[0m23:08:05.702852 [debug] [Thread-1 (]: Writing injected SQL for node "model.jane_street_streaming.market_data_daily"
+[0m23:08:05.703724 [debug] [Thread-1 (]: Began executing node model.jane_street_streaming.market_data_daily
+[0m23:08:05.729529 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:08:06.372934 [debug] [Thread-1 (]: Hard refreshing `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily` because it is not replaceable
+[0m23:08:06.545102 [debug] [Thread-1 (]: Writing runtime sql for node "model.jane_street_streaming.market_data_daily"
+[0m23:08:06.545763 [debug] [Thread-1 (]: On model.jane_street_streaming.market_data_daily: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "jane_street_streaming", "target_name": "dev", "node_id": "model.jane_street_streaming.market_data_daily"} */
+
+  
+    
+
+    create or replace table `zoomcamp-de-project-495316`.`jane_street_market_data`.`market_data_daily`
+      
+    partition by range_bucket(
+            date_id,
+            generate_array(0, 2000, 1)
+        )
+    cluster by date_id, symbol_id
+
+    OPTIONS()
+    as (
+      
+
+-- This model assumes an external table or raw table exists named `raw_market_data`
+-- that has been loaded from GCS or directly written by Flink.
+-- We aggregate it to daily level to power Looker Studio efficiently.
+
+WITH source_data AS (
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
+)
+
+SELECT
+    date_id,
+    symbol_id,
+    COUNT(time_id) as tick_count,
+    AVG(weight) as avg_weight,
+    AVG(feature_00) as avg_feature_00,
+    AVG(feature_01) as avg_feature_01,
+    AVG(responder_6) as avg_responder_6
+FROM source_data
+GROUP BY 
+    date_id, 
+    symbol_id
+    );
+  
+[0m23:08:07.289347 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=zoomcamp-de-project-495316&j=bq:EU:69e4d8bd-3a1e-442b-a86f-a567ca2cbdec&page=queryresults
+[0m23:08:12.223389 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3505ac3-95c3-4330-be52-3f18a17a8565', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053a9510>]}
+[0m23:08:12.224471 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jane_street_market_data.market_data_daily .... [[32mCREATE TABLE (527.0 rows, 441.4 MiB processed)[0m in 6.53s]
+[0m23:08:12.224997 [debug] [Thread-1 (]: Finished running node model.jane_street_streaming.market_data_daily
+[0m23:08:12.226866 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:08:12.311537 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:08:12.311902 [debug] [MainThread]: Connection 'model.jane_street_streaming.market_data_daily' was properly closed.
+[0m23:08:12.312194 [info ] [MainThread]: 
+[0m23:08:12.312424 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.19 seconds (8.19s).
+[0m23:08:12.312962 [debug] [MainThread]: Command end result
+[0m23:08:12.348994 [info ] [MainThread]: 
+[0m23:08:12.349840 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:08:12.350507 [info ] [MainThread]: 
+[0m23:08:12.351436 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m23:08:12.359302 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 14.050063, "process_user_time": 5.504063, "process_kernel_time": 1.705223, "process_mem_max_rss": "370606080", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:08:12.360450 [debug] [MainThread]: Command `dbt run` succeeded at 23:08:12.360366 after 14.05 seconds
+[0m23:08:12.360826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103520610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10770b010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072a3bd0>]}
+[0m23:08:12.361089 [debug] [MainThread]: Flushing usage events

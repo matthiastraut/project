@@ -1,25 +1,11 @@
-{{
-  config(
-    materialized='table',
-    partition_by={
-      "field": "date_id",
-      "data_type": "int64",
-      "range": {
-        "start": 0,
-        "end": 2000,
-        "interval": 1
-      }
-    },
-    cluster_by=['date_id', 'symbol_id']
-  )
-}}
+
 
 -- This model assumes an external table or raw table exists named `raw_market_data`
 -- that has been loaded from GCS or directly written by Flink.
 -- We aggregate it to daily level to power Looker Studio efficiently.
 
 WITH source_data AS (
-    SELECT * FROM {{ source('jane_street', 'raw_market_data') }}
+    SELECT * FROM `zoomcamp-de-project-495316`.`jane_street_market_data`.`raw_market_data`
 )
 
 SELECT

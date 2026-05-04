@@ -43,19 +43,9 @@ resource "google_bigquery_table" "raw_market_data" {
   table_id   = "raw_market_data"
 
   external_data_configuration {
-    autodetect    = false
+    autodetect    = true
     source_format = "NEWLINE_DELIMITED_JSON"
     source_uris   = ["gs://${google_storage_bucket.data-lake-bucket.name}/raw/*.json"]
-
-    schema = jsonencode([
-      { name = "date_id",      type = "INTEGER", mode = "NULLABLE" },
-      { name = "time_id",      type = "INTEGER", mode = "NULLABLE" },
-      { name = "symbol_id",    type = "INTEGER", mode = "NULLABLE" },
-      { name = "weight",       type = "FLOAT",   mode = "NULLABLE" },
-      { name = "feature_00",   type = "FLOAT",   mode = "NULLABLE" },
-      { name = "feature_01",   type = "FLOAT",   mode = "NULLABLE" },
-      { name = "responder_6",  type = "FLOAT",   mode = "NULLABLE" }
-    ])
   }
 
   deletion_protection = false

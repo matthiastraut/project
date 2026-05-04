@@ -66,12 +66,15 @@ make airflow-up    # Start Airflow webserver and scheduler
    ```
 3. **Airflow**: Open `http://localhost:8080` (airflow/airflow) and turn on the `kafka_to_gcs_direct` DAG. This will sync Kafka data to GCS every 5 minutes in memory.
 
+
+![alt text](image.png)
+
+
 ### 5. Run dbt Transformations
-Once data is in GCS/BigQuery, run dbt:
+Once data is in GCS/BigQuery, run dbt, to consolidate the data by grouping it by date and symbol which we can then display on a dashboard:
 ```bash
 make dbt-run
 ```
-
 
 ## Looker Studio Dashboard Setup
 

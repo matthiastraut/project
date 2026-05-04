@@ -1,0 +1,1 @@
+{"_invocation_id": "f3505ac3-95c3-4330-be52-3f18a17a8565", "linked": {"0": {"name": "source.jane_street_streaming.jane_street.raw_market_data", "type": "source", "succ": [1]}, "1": {"name": "model.jane_street_streaming.market_data_daily", "type": "model"}}}
